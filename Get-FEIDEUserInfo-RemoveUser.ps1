@@ -125,7 +125,7 @@ PROCESS
             {
                 Write-Warning -Message "BRUKER BLIR SLETTET FRA ANSATTE.CSV" 
                 
-                $ansattecsv | Where {$_.Brukernavn -like $Brukernavn} | Out-File -Append -FilePath "\\dmzufeide01\brukerimport$\slettede_brukere.csv"
+                $ansattecsv | Where {$_.Brukernavn -like $Brukernavn} | Out-File -Append -FilePath "\\server\brukerimport$\slettede_brukere.csv"
                 
                 #sletter bruker, og lager ny CSV FIL - Overskriver gamle filen/Skriver til ny fil.
                 $ansattecsv | Where-Object {$_.Brukernavn -ne $Brukernavn} `
@@ -140,7 +140,7 @@ PROCESS
                 Write-Warning -Message "BRUKER BLIR SLETTET FRA ELEVER.CSV"
                 #Kjører funskjon for å lage objekt variabel informasjon
 
-                $elevercsv | Where {$_.Brukernavn -like $Brukernavn} | Out-File -Append -FilePath "\\dmzufeide01\brukerimport$\slettede_brukere.csv"
+                $elevercsv | Where {$_.Brukernavn -like $Brukernavn} | Out-File -Append -FilePath "\\server\brukerimport$\slettede_brukere.csv"
 
                 
                 #sletter bruker, og lager ny CSV FIL - Overskriver gamle filen/Skriver til ny fil.
@@ -183,6 +183,6 @@ END
 
 }#end function Get-FEIDEUserInfo
 
-#Get-FEIDEUserInfo -Brukernavn nostvold
-#Get-FEIDEUserInfo -Brukernavn "kgranrusten"
+#Get-FEIDEUserInfo -Brukernavn bruker1
+#Get-FEIDEUserInfo -Brukernavn "bruker1"
 
