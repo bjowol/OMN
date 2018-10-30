@@ -1,12 +1,12 @@
 ﻿#https://docs.microsoft.com/en-us/office365/enterprise/powershell/assign-roles-to-user-accounts-with-office-365-powershell
 
 function Connect-MSOLServiceda-bwolstad() {
-    $cred = (Get-Credential -UserName da-bwolstad@oslo.mil.no -Message "Passord")
+    $cred = (Get-Credential -UserName da-bwolstad@domain.com -Message "Passord")
     Connect-MsolService -Credential $cred
 }
 Connect-MSOLServiceda-bwolstad
 
-$newadmins = ("da-OLOVDOKKEN@oslo.mil.no")
+$newadmins = ("da-user234@domain.com")
 
 
 function Get-MSOLSharePointAdmins(){
