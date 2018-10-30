@@ -50,8 +50,8 @@ function Install-Office365modules()
 
 
 Import-Module "Z:\Documents\1. Powershell\Get-MSOLUserInfo.psm1"
-$ModulePath = "\\common\drift$\Scripts\Brukeroppretting\PowershellModuler"
-Import-Module "$ModulePath\OSLO-Common-Modules.psm1" -WarningAction SilentlyContinue
+$ModulePath = "\\server\share$\Scripts\Brukeroppretting\PowershellModuler"
+Import-Module "$ModulePath\come-module.psm1" -WarningAction SilentlyContinue
 Import-Module 365Tools 
 Import-Module AzureAD
 Import-Module MSOnline
