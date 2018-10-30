@@ -11,7 +11,7 @@ Param
 (
 
     [Parameter(Mandatory=$False,Position=0)]
-    [String]$Address = "bwolstad@oslo.mil.no",
+    [String]$Address = "bwolstad@domain.com",
     [Parameter(Mandatory=$False,Position=1)]
     [String]$Subject = "POWERSHELL",
     [Parameter(Mandatory=$False,Position=2)]
